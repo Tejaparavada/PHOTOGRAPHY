@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SAI SURYA DIGITALS</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+body{background:#0b0b0b;color:white;}
+
+nav{
+    position:fixed;width:100%;padding:20px 50px;
+    display:flex;justify-content:space-between;
+    background:rgba(0,0,0,0.7);z-index:1000;
+}
+
+nav ul{display:flex;gap:25px;list-style:none;}
+nav a{color:white;text-decoration:none;}
+nav a:hover{color:#ff3c1f;}
+
+.hero{display:flex;height:100vh;}
+
+.hero-left{
+    width:50%;padding:100px 60px;
+    display:flex;flex-direction:column;justify-content:center;
+}
+
+.tag{color:#ff3c1f;margin-bottom:20px;}
+
+.hero-left h1{font-size:clamp(28px,5vw,55px);}
+
+.btn{
+    display:inline-block;
+    margin-top:25px;
+
+    padding:8px 18px;
+    font-size:14px;
+    letter-spacing:1px;
+
+    color:#ff3c1f;
+    border:2px solid #ff3c1f;
+    background:transparent;
+
+    border-radius:25px;
+    text-decoration:none;
+
+    transition:0.3s;
+}
+.btn:hover{
+    background:#ff3c1f;
+    color:#fff;
+    box-shadow:0 5px 15px rgba(255,60,31,0.4);
+}
+
+.hero-right{width:55%;position:relative;}
+
+.hero-right img{
+    width:100%;height:100%;object-fit:cover;
+}
+
+.hero-right::before{
+    content:"";position:absolute;left:-120px;
+    width:220px;height:100%;
+    background:#0b0b0b;transform:skewX(-20deg);
+}
+
+section{padding:80px 50px;text-align:center;}
+
+.section-title{font-size:40px;margin-bottom:40px;}
+
+.portfolio-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.portfolio-item{
+    background:#111;border-radius:12px;
+    overflow:hidden;transition:0.3s;
+}
+
+.portfolio-item img{
+    width:100%;height:260px;
+    object-fit:cover;transition:0.4s;
+}
+
+.portfolio-text{
+    padding:15px;font-size:16px;
+    font-weight:500;transition:0.3s;
+}
+
+.portfolio-item:hover{transform:translateY(-8px);}
+.portfolio-item:hover img{transform:scale(1.05);}
+.portfolio-item:hover .portfolio-text{color:#ff3c1f;}
+
+.contact{background:#111;}
+
+.whatsapp{
+    position:fixed;bottom:20px;right:20px;
+    background:#25D366;padding:20px;border-radius:50%;
+}
+.contact{
+    background:#111;
+}
+
+.contact-container{
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    flex-wrap:wrap;
+    margin-top:40px;
+}
+
+.contact-card{
+    background:#1a1a1a;
+    padding:25px;
+    width:220px;
+    border-radius:12px;
+    transition:0.3s;
+}
+
+.contact-card h3{
+    margin-bottom:10px;
+}
+
+.contact-card a{
+    color:#ff3c1f;
+    text-decoration:none;
+}
+
+.contact-card:hover{
+    transform:translateY(-8px);
+    background:#222;
+}
+
+@media(max-width:768px){
+
+    /* NAV */
+    nav{
+        flex-direction:column;
+        align-items:center;
+        padding:15px;
+    }
+
+    nav ul{
+        flex-direction:column;
+        gap:10px;
+        margin-top:10px;
+    }
+
+    /* HERO */
+    .hero{
+        flex-direction:column;
+        height:auto;
+    }
+
+    .hero-left{
+        width:100%;
+        padding:50px 20px;
+        text-align:center;
+        align-items:center;   /* 🔥 center content */
+    }
+
+    .hero-left h1{
+        font-size:32px;       /* 🔥 prevent text cutting */
+    }
+
+    .btn{
+        margin-top:20px;
+    }
+
+    .hero-right{
+        width:100%;
+        height:280px;
+    }
+
+    .hero-right img{
+        object-position:center;
+    }
+
+    .hero-right::before{
+        display:none; /* remove diagonal on mobile */
+    }
+
+    /* PORTFOLIO */
+    .portfolio-item img{
+        height:200px;
+    }
+
+    /* CONTACT */
+    .contact-container{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .contact-card{
+        width:90%;
+    }
+
+    /* GENERAL */
+    section{
+        padding:50px 20px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+    <h2>SAI SURYA DIGITALS</h2>
+    <ul>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<div class="hero">
+    <div class="hero-left">
+        <p class="tag">— CREATIVE PHOTOGRAPHY</p>
+        <h1>PHOTOGRAPHY<br>DREAM IN PICTURES<br>LIVE IN MOMENTS.</h1>
+        <a href="#portfolio" class="btn">EVENTS</a>
+    </div>
+
+    <div class="hero-right">
+        <img src="GPHE2659.jpg">
+    </div>
+</div>
+
+<section id="portfolio">
+    <h2 class="section-title">Our Services</h2>
+
+    <div class="portfolio-grid">
+
+        <div class="portfolio-item">
+            <img src="photo1.jpg">
+            <div class="portfolio-text">Wedding Photography</div>
+        </div>
+
+        <div class="portfolio-item">
+            <img src="photo2.jpg">
+            <div class="portfolio-text">Candid Photography</div>
+        </div>
+
+        <div class="portfolio-item">
+            <img src="photo3.jpg">
+            <div class="portfolio-text">Drone Shoot</div>
+        </div>
+
+        <div class="portfolio-item">
+            <img src="photo4.png">
+            <div class="portfolio-text">Cinematic Videography</div>
+        </div>
+
+        <div class="portfolio-item">
+            <img src="photo5.jpg">
+            <div class="portfolio-text">Pre-Wedding Shoot</div>
+        </div>
+
+        <div class="portfolio-item">
+            <img src="photo6.png">
+            <div class="portfolio-text">Live Streaming</div>
+        </div>
+
+        <div class="portfolio-item">
+            <img src="photo7.png">
+            <div class="portfolio-text">Pre-Wedding Songs</div>
+        </div>
+
+        <div class="portfolio-item">
+            <img src="photo8.jpg">
+            <div class="portfolio-text">Portrait Shoot</div>
+        </div>
+
+        <div class="portfolio-item">
+            <img src="photo9.jpg">
+            <div class="portfolio-text">Birthdays</div>
+        </div>
+
+        <div class="portfolio-item">
+            <img src="photo10.jpg">
+            <div class="portfolio-text">Half Saree Functions</div>
+        </div>
+
+        <div class="portfolio-item">
+            <img src="photo11.jpg">
+            <div class="portfolio-text">House Openings</div>
+        </div>
+
+    </div>
+</section>
+
+<section id="contact" class="contact">
+    <h2 class="section-title">Contact Us</h2>
+
+    <div class="contact-container">
+
+        <div class="contact-card">
+            <h3>📞 Phone</h3>
+            <p><a href="tel:+919848909443">+91 9848909443</a></p>
+        </div>
+
+        <div class="contact-card">
+            <h3> Instagram</h3>
+            <p>
+                <a href="https://www.instagram.com/naidu_paravada/" target="_blank">Naidu_Paravada</a>
+                </a>
+            </p>
+        </div>
+
+        <div class="contact-card">
+            <h3>📧 Email</h3>
+            <p><a href="mailto:appalanaiduparavada443@gmail.com">appalanaiduparavada
+                443
+                </a></p>
+        </div>
+
+    </div>
+</section>
+
+<a class="whatsapp"
+href="https://api.whatsapp.com/send?phone=919848909443&text=Hi%20I%20want%20to%20book%20a%20shoot"
+target="_blank">💬</a>
+
+</body>
+</html>
